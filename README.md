@@ -79,4 +79,4 @@ You can also deploy directly to **Netlify**, **Vercel**, or **GitHub Pages** sin
 
 ---
 
-Made with lots of `</>` by **Aman Deep*
+Made with lots of `</>` by **Aman Deep**

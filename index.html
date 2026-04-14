@@ -1,1 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aman Deep — Portfolio</title>
+  <meta name="description" content="Portfolio of Aman Deep — a young developer passionate about web development, Python, and building real-world projects with HTML, CSS, JavaScript, and Flask." />
+  <meta name="keywords" content="Aman Deep, portfolio, developer, HTML, CSS, JavaScript, Python, Flask, student" />
+  <meta property="og:title" content="Aman Deep — Portfolio" />
+  <meta property="og:description" content="Young developer building cool things with code." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
 
+  <!-- ── NAV ── -->
+  <nav id="navbar" class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Home">AD</a>
+      <ul class="nav-links" role="list">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="mailto:amandeep.intl@gmail.com" id="nav-cta" class="btn btn-nav">Say hello ↗</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <a href="#about" class="mob-link">About</a>
+      <a href="#skills" class="mob-link">Skills</a>
+      <a href="#projects" class="mob-link">Projects</a>
+      <a href="#contact" class="mob-link">Contact</a>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero" class="hero" aria-label="Hero">
+    <div class="hero-bg">
+      <div class="orb orb-1" aria-hidden="true"></div>
+      <div class="orb orb-2" aria-hidden="true"></div>
+      <div class="orb orb-3" aria-hidden="true"></div>
+      <div class="grid-lines" aria-hidden="true"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge" role="text">
+        <span class="badge-dot" aria-hidden="true"></span>
+        Available for exciting projects
+      </div>
+
+      <h1 class="hero-title">
+        <span class="title-line">Hi, I'm</span>
+        <span class="title-name">Aman Deep</span>
+        <span class="title-tagline">I build things<br/>for the <em>web.</em></span>
+      </h1>
+
+      <p class="hero-sub">
+        Student developer crafting experiences with code —
+        HTML, CSS, JS, Python &amp; Flask. Deployed on Vercel, Netlify &amp; Render.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" id="hero-projects-btn" class="btn btn-primary">View My Work</a>
+        <a href="https://github.com/amandeepintl" id="hero-github-btn" class="btn btn-ghost" target="_blank" rel="noopener">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </div>
+
+      <div class="hero-stats" role="list" aria-label="Quick stats">
+        <div class="stat" role="listitem">
+          <span class="stat-num">5+</span>
+          <span class="stat-label">Languages &amp; Frameworks</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat" role="listitem">
+          <span class="stat-num">3</span>
+          <span class="stat-label">Deploy Platforms</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section id="about" class="section about" aria-label="About me">
+    <div class="container">
+      <div class="section-label">Who I Am</div>
+      <h2 class="section-title">A little about <span class="accent">me</span></h2>
+
+      <div class="about-grid">
+        <div class="about-card glass-card">
+          <div class="about-avatar" aria-hidden="true">
+            <div class="avatar-ring"></div>
+            <div class="avatar-inner">AD</div>
+          </div>
+          <div class="about-info">
+            <h3 class="about-name">Aman Deep</h3>
+            <p class="about-meta">Student Developer</p>
+            <p class="about-desc">
+              I'm a student developer who loves turning ideas into reality through code. My journey started with HTML and CSS, grew into JavaScript and Python, and now I'm building full-stack web apps with Flask — deploying them live on platforms like Render, Vercel, and Netlify.
+            </p>
+            <p class="about-desc">
+              I believe in learning by building real things. Every project teaches me something new, and I enjoy the challenge of going from a blank file to a fully deployed app.
+            </p>
+            <div class="about-links">
+              <a href="https://github.com/amandeepintl" id="about-github" class="chip-link" target="_blank" rel="noopener" aria-label="GitHub profile">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                amandeepintl
+              </a>
+              <a href="mailto:amandeep.intl@gmail.com" id="about-email" class="chip-link" aria-label="Send email">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                amandeep.intl@gmail.com
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-cards-col">
+          <div class="mini-card glass-card">
+            <div class="mini-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgb(47,160,132)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+            <div>
+              <h4>Goal-Driven</h4>
+              <p>Every project starts with a clear purpose. I build things that solve real problems.</p>
+            </div>
+          </div>
+          <div class="mini-card glass-card">
+            <div class="mini-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgb(111,207,151)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+            <div>
+              <h4>Fast Learner</h4>
+              <p>From HTML to Flask in one journey. I pick up new tools and frameworks quickly.</p>
+            </div>
+          </div>
+          <div class="mini-card glass-card">
+            <div class="mini-icon" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgb(47,160,132)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+            <div>
+              <h4>Deploy-Ready</h4>
+              <p>I don't just code locally — I ship to the web using Vercel, Netlify, and Render.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <section id="skills" class="section skills" aria-label="Skills">
+    <div class="container">
+      <div class="section-label">What I Know</div>
+      <h2 class="section-title">Skills &amp; <span class="accent">Tools</span></h2>
+
+      <div class="skills-grid">
+
+        <div class="skill-category glass-card">
+          <h3 class="skill-cat-title">
+            <span class="cat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgb(47,160,132)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span> Languages
+          </h3>
+          <div class="skill-tags">
+            <div class="skill-tag" id="skill-html">
+              <span class="skill-dot" style="background:#e34c26"></span> HTML5
+            </div>
+            <div class="skill-tag" id="skill-css">
+              <span class="skill-dot" style="background:#264de4"></span> CSS3
+            </div>
+            <div class="skill-tag" id="skill-js">
+              <span class="skill-dot" style="background:#f7df1e"></span> JavaScript
+            </div>
+            <div class="skill-tag" id="skill-python">
+              <span class="skill-dot" style="background:#3572A5"></span> Python
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card">
+          <h3 class="skill-cat-title">
+            <span class="cat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgb(47,160,132)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></span> Frameworks
+          </h3>
+          <div class="skill-tags">
+            <div class="skill-tag" id="skill-flask">
+              <span class="skill-dot" style="background:rgb(47,160,132)"></span> Flask
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card">
+          <h3 class="skill-cat-title">
+            <span class="cat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgb(47,160,132)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/><polyline points="12 13 12 9"/><polyline points="10 11 12 9 14 11"/></svg></span> Deploy &amp; Hosting
+          </h3>
+          <div class="skill-tags">
+            <div class="skill-tag" id="skill-vercel">
+              <span class="skill-dot" style="background:#000"></span> Vercel
+            </div>
+            <div class="skill-tag" id="skill-netlify">
+              <span class="skill-dot" style="background:#00c7b7"></span> Netlify
+            </div>
+            <div class="skill-tag" id="skill-render">
+              <span class="skill-dot" style="background:#46e3b7"></span> Render
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-category glass-card">
+          <h3 class="skill-cat-title">
+            <span class="cat-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgb(47,160,132)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></span> Tools
+          </h3>
+          <div class="skill-tags">
+            <div class="skill-tag" id="skill-github">
+              <span class="skill-dot" style="background:#333"></span> GitHub
+            </div>
+            <div class="skill-tag" id="skill-vscode">
+              <span class="skill-dot" style="background:#007acc"></span> VS Code
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- progress bars -->
+      <div class="progress-section">
+        <h3 class="progress-title">Proficiency</h3>
+        <div class="progress-list">
+          <div class="progress-item">
+            <div class="progress-header">
+              <span>HTML &amp; CSS</span><span class="progress-pct">90%</span>
+            </div>
+            <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-fill" data-width="90"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-header">
+              <span>JavaScript</span><span class="progress-pct">70%</span>
+            </div>
+            <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-fill" data-width="70"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-header">
+              <span>Python</span><span class="progress-pct">75%</span>
+            </div>
+            <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-fill" data-width="75"></div>
+            </div>
+          </div>
+          <div class="progress-item">
+            <div class="progress-header">
+              <span>Flask</span><span class="progress-pct">65%</span>
+            </div>
+            <div class="progress-bar" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-fill" data-width="65"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <section id="projects" class="section projects" aria-label="Projects">
+    <div class="container">
+      <div class="section-label">What I've Built</div>
+      <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
+
+      <div class="projects-grid">
+
+        <article class="project-card glass-card" id="project-inspectgg">
+          <div class="project-top">
+            <div class="project-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgb(47,160,132)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+            <div class="project-tags-row">
+              <span class="p-tag">Python</span>
+              <span class="p-tag">Flask</span>
+            </div>
+          </div>
+          <h3 class="project-name">Inspect.gg</h3>
+          <p class="project-desc">
+            A laptop diagnostic tool that benchmarks hardware, reads battery &amp; disk health via WMI, provides live thermal monitoring, and generates professional appraisal reports for second-hand laptop buyers.
+          </p>
+          <div class="project-footer">
+            <a href="https://github.com/amandeepintl" class="project-link" target="_blank" rel="noopener" aria-label="View Inspect.gg on GitHub">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              View on GitHub
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card glass-card" id="project-portfolio">
+          <div class="project-top">
+            <div class="project-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgb(111,207,151)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+            <div class="project-tags-row">
+              <span class="p-tag">HTML</span>
+              <span class="p-tag">CSS</span>
+              <span class="p-tag">JS</span>
+            </div>
+          </div>
+          <h3 class="project-name">This Portfolio</h3>
+          <p class="project-desc">
+            A personal portfolio site built from scratch with pure HTML, CSS and JavaScript. Features smooth animations, Apple-inspired aesthetics, and a custom teal color palette — no frameworks needed.
+          </p>
+          <div class="project-footer">
+            <a href="https://github.com/amandeepintl" class="project-link" target="_blank" rel="noopener" aria-label="View Portfolio on GitHub">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              View on GitHub
+            </a>
+          </div>
+        </article>
+
+        <article class="project-card glass-card project-wip" id="project-next">
+          <div class="project-top">
+            <div class="project-icon" aria-hidden="true"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="rgb(238,238,238)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/><line x1="14.5" y1="4" x2="9.5" y2="20"/></svg></div>
+            <div class="project-tags-row">
+              <span class="p-tag wip-tag">Coming Soon</span>
+            </div>
+          </div>
+          <h3 class="project-name">Next Project</h3>
+          <p class="project-desc">
+            Something exciting is in the works. Stay tuned — follow my GitHub to be the first to know when it drops.
+          </p>
+          <div class="project-footer">
+            <a href="https://github.com/amandeepintl" class="project-link" target="_blank" rel="noopener" aria-label="Follow on GitHub">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              Follow on GitHub
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section id="contact" class="section contact" aria-label="Contact">
+    <div class="container">
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title">Let's <span class="accent">Connect</span></h2>
+
+      <div class="contact-wrap">
+        <div class="contact-text">
+          <p>
+            Have a project in mind, a cool idea to collaborate on, or just want to say hi? I'd love to hear from you. I'm always open to learning and building together.
+          </p>
+          <div class="contact-methods">
+            <a href="mailto:amandeep.intl@gmail.com" id="contact-email-btn" class="contact-method">
+              <div class="cm-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <span class="cm-label">Email</span>
+                <span class="cm-value">amandeep.intl@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://github.com/amandeepintl" id="contact-github-btn" class="contact-method" target="_blank" rel="noopener">
+              <div class="cm-icon" aria-hidden="true">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+              </div>
+              <div>
+                <span class="cm-label">GitHub</span>
+                <span class="cm-value">@amandeepintl</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-logo">AD</div>
+      <p class="footer-copy">
+        Designed &amp; built by <strong>Aman Deep</strong>
+      </p>
+      <p class="footer-made">Made with ❤️ and lots of &lt;/&gt;</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

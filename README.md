@@ -1,6 +1,6 @@
 # 🌿 Aman Deep — Portfolio
 
-A minimal, Apple-inspired personal portfolio built from scratch with pure HTML, CSS & JavaScript  
+A minimal, Apple-inspired personal portfolio built from scratch with pure HTML, CSS & JavaScript 
 No frameworks. No dependencies. Just clean code.
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)

@@ -1,0 +1,184 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #171b17;
+  --muted: #5d675e;
+  --quiet: #eef0ea;
+  --paper: #f8f8f3;
+  --panel: #ffffff;
+  --forest: #16483f;
+  --cobalt: #2f65a7;
+  --ember: #cf4d32;
+  --gold: #b98724;
+  --line: rgba(23, 27, 23, 0.14);
+  --shadow: 0 24px 70px rgba(23, 27, 23, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ink);
+  background:
+    linear-gradient(90deg, rgba(23, 27, 23, 0.055) 1px, transparent 1px) 0 0 / 56px 56px,
+    linear-gradient(rgba(23, 27, 23, 0.045) 1px, transparent 1px) 0 0 / 56px 56px,
+    linear-gradient(135deg, rgba(47, 101, 167, 0.1), transparent 34%),
+    var(--paper);
+  font-family: var(--font-sans), "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+body::before {
+  position: fixed;
+  inset: -10%;
+  z-index: -1;
+  pointer-events: none;
+  content: "";
+  background:
+    linear-gradient(115deg, transparent 0 68%, rgba(22, 72, 63, 0.08) 68% 74%, transparent 74%),
+    linear-gradient(18deg, transparent 0 72%, rgba(207, 77, 50, 0.1) 72% 76%, transparent 76%);
+  animation: quiet-drift 26s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+::selection {
+  color: white;
+  background: var(--forest);
+}
+
+a {
+  text-decoration: none;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 3px solid var(--cobalt);
+  outline-offset: 4px;
+}
+
+.font-display {
+  font-family: var(--font-display), Georgia, serif;
+}
+
+.text-pretty {
+  text-wrap: pretty;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.grain {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.18;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23noise)' opacity='.32'/%3E%3C/svg%3E");
+}
+
+.ambient-motion {
+  position: fixed;
+  inset: -18%;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.6;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(47, 101, 167, 0.13), transparent 28%),
+    radial-gradient(circle at 82% 12%, rgba(185, 135, 36, 0.12), transparent 24%),
+    radial-gradient(circle at 72% 78%, rgba(22, 72, 63, 0.12), transparent 28%);
+  animation: ambient-shift 22s ease-in-out infinite alternate;
+  will-change: transform, opacity;
+}
+
+.skip-link {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 50;
+  padding: 12px 16px;
+  color: white;
+  background: var(--forest);
+  border-radius: 999px;
+  transform: translateY(-140%);
+  transition-property: transform;
+  transition-duration: 180ms;
+  transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.learning-bar {
+  transform-origin: left center;
+  animation: bar-grow 900ms cubic-bezier(0.2, 0, 0, 1) both;
+}
+
+@keyframes quiet-drift {
+  from {
+    transform: translate3d(-1.5%, -1%, 0) rotate(-0.4deg);
+  }
+
+  to {
+    transform: translate3d(1.5%, 1%, 0) rotate(0.4deg);
+  }
+}
+
+@keyframes ambient-shift {
+  from {
+    opacity: 0.5;
+    transform: translate3d(-1.2%, 0, 0) scale(1);
+  }
+
+  to {
+    opacity: 0.68;
+    transform: translate3d(1.2%, -1%, 0) scale(1.02);
+  }
+}
+
+@keyframes bar-grow {
+  from {
+    transform: scaleX(0);
+  }
+
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 1ms !important;
+  }
+
+  .ambient-motion {
+    animation: none !important;
+  }
+}
+
+@media (pointer: fine) {
+  html,
+  body,
+  a,
+  button {
+    cursor: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='12' cy='12' r='7' fill='%2316483f'/%3E%3Ccircle cx='12' cy='12' r='9' fill='none' stroke='%23f8f8f3' stroke-width='2' opacity='.95'/%3E%3C/svg%3E") 12 12, auto;
+  }
+}

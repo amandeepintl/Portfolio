@@ -1,0 +1,17 @@
+node_modules
+.next
+out
+dist
+.vercel
+legacy-static-html
+
+.env
+.env*.local
+
+desktop-preview.png
+mobile-preview.png
+dev-server*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*

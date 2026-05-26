@@ -51,13 +51,22 @@ export const metadata: Metadata = {
     url: siteConfig.url,
     siteName: siteConfig.name,
     type: "website",
-    locale: "en_IN"
+    locale: "en_IN",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Aman Deep Portfolio"
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
     title: siteConfig.title,
     description: siteConfig.description,
-    creator: "@amandeepintl"
+    creator: "@amandeepintl",
+    images: ["/og-image.png"]
   },
   robots: {
     index: true,

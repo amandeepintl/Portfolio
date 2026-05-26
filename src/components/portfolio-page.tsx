@@ -3,70 +3,38 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Code2, GraduationCap, Mail, MapPin, Sparkles } from "lucide-react";
-import { motion, useReducedMotion } from "motion/react";
 import { ContactLinks } from "@/components/contact-links";
 import { ProjectCard } from "@/components/project-card";
 import { SiteShell } from "@/components/site-shell";
 import { allProjects, profile } from "@/data/portfolio";
 
-const fadeIn = {
-  hidden: { opacity: 0, y: 18 },
-  show: { opacity: 1, y: 0 }
-};
-
-const stagger = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.08
-    }
-  }
-};
-
 const latestHomeProjects = Array.isArray(allProjects) ? allProjects.slice(0, 3) : [];
 
 export function PortfolioPage() {
-  const reduceMotion = useReducedMotion();
-
   return (
     <SiteShell>
       <section
         className="mx-auto grid w-[min(1180px,calc(100%-32px))] gap-10 py-14 md:grid-cols-[1.1fr_0.9fr] md:py-20 lg:gap-16"
         aria-labelledby="hero-title"
       >
-        <motion.div
-          className="flex flex-col justify-center"
-          initial={reduceMotion ? false : "hidden"}
-          animate="show"
-          variants={stagger}
-        >
-          <motion.p
-            className="mb-5 inline-flex w-fit items-center gap-2 border border-[color:var(--line)] bg-white px-3 py-2 text-xs font-extrabold uppercase tracking-[0.18em] text-[color:var(--forest)] shadow-sm"
-            variants={fadeIn}
-          >
+        <div className="flex flex-col justify-center hero-animate">
+          <p className="mb-5 inline-flex w-fit items-center gap-2 border border-[color:var(--line)] bg-white px-3 py-2 text-xs font-extrabold uppercase tracking-[0.18em] text-[color:var(--forest)] shadow-sm">
             <Sparkles className="h-4 w-4" aria-hidden="true" />
             {profile.eyebrow}
-          </motion.p>
-          <motion.h1
+          </p>
+          <h1
             id="hero-title"
             className="font-display max-w-4xl text-balance text-6xl leading-none text-[color:var(--ink)] md:text-8xl"
-            variants={fadeIn}
           >
             {profile.headline}
-          </motion.h1>
-          <motion.p
-            className="mt-7 max-w-2xl text-pretty text-lg leading-8 text-[color:var(--muted)] md:text-xl"
-            variants={fadeIn}
-          >
+          </h1>
+          <p className="mt-7 max-w-2xl text-pretty text-lg leading-8 text-[color:var(--muted)] md:text-xl">
             {profile.intro}
-          </motion.p>
-          <motion.p
-            className="mt-4 max-w-2xl border-l-4 border-[color:var(--gold)] pl-4 text-pretty text-base font-bold leading-7 text-[color:var(--forest)]"
-            variants={fadeIn}
-          >
+          </p>
+          <p className="mt-4 max-w-2xl border-l-4 border-[color:var(--gold)] pl-4 text-pretty text-base font-bold leading-7 text-[color:var(--forest)]">
             {profile.focus}
-          </motion.p>
-          <motion.div className="mt-8 flex flex-wrap gap-3" variants={fadeIn}>
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
             <Link
               className="inline-flex min-h-12 items-center gap-2 bg-[color:var(--ink)] px-5 text-sm font-extrabold text-white shadow-[0_18px_44px_rgba(23,27,23,0.24)] transition-[transform,box-shadow] duration-200 hover:-translate-y-0.5 hover:shadow-[0_24px_54px_rgba(23,27,23,0.28)] active:scale-[0.96]"
               href="/work"
@@ -81,14 +49,11 @@ export function PortfolioPage() {
               Contact
               <Mail className="h-4 w-4" aria-hidden="true" />
             </Link>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
 
-        <motion.aside
-          className="relative self-start overflow-hidden border border-[color:var(--line)] bg-white/92 shadow-[var(--shadow)] lg:scale-[1.04] lg:origin-top"
-          initial={reduceMotion ? false : { opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.55, ease: [0.2, 0, 0, 1] }}
+        <aside
+          className="relative self-start overflow-hidden border border-[color:var(--line)] bg-white/92 shadow-[var(--shadow)] lg:scale-[1.04] lg:origin-top aside-animate"
           aria-label="Profile summary"
         >
           <div className="grid grid-cols-[1fr_136px] gap-6 border-b border-[color:var(--line)] p-6">
@@ -137,7 +102,7 @@ export function PortfolioPage() {
               </p>
             </div>
           </div>
-        </motion.aside>
+        </aside>
       </section>
 
       <section className="border-y border-[color:var(--line)] bg-[color:var(--forest)] text-white">
@@ -199,3 +164,4 @@ export function PortfolioPage() {
     </SiteShell>
   );
 }
+

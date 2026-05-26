@@ -107,6 +107,9 @@ export default function RootLayout({
 
   return (
     <html lang="en" data-scroll-behavior="smooth" className={`${display.variable} ${sans.variable}`}>
+      <head>
+        <link rel="preconnect" href="https://avatars.githubusercontent.com" />
+      </head>
       <body>
         {children}
         <script

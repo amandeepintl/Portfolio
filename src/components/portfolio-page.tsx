@@ -71,8 +71,9 @@ export function PortfolioPage() {
               className="aspect-square object-cover shadow-[0_0_0_1px_rgba(0,0,0,0.1)]"
               src={profile.avatar}
               alt={`${profile.name} GitHub avatar`}
-              width={224}
-              height={224}
+              width={136}
+              height={136}
+              sizes="136px"
               priority
             />
           </div>

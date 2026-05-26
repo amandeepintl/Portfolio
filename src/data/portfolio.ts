@@ -29,7 +29,7 @@ export const siteConfig = {
   title: "Aman Deep - 13 y/o Dev Portfolio",
   description:
     "Portfolio for Aman Deep, a 13 y/o dev from India building learning apps, AI experiments, translation tools, and Minecraft projects.",
-  url: "https://amandeepintl.vercel.app"
+  url: "https://amandeep.sbs"
 };
 
 export const profile = {

@@ -15,7 +15,7 @@ export function ProjectCard({ project, index }: { project: Project; index: numbe
       </div>
       <h3 className="text-2xl font-extrabold">{project.name}</h3>
       <p className="mt-2 text-xs font-extrabold uppercase tracking-[0.14em] text-[color:var(--muted)]">
-        Updated {project.pushedAt}
+        pushed {project.pushedAt}
       </p>
       <p className="mt-4 text-pretty text-sm leading-7 text-[color:var(--muted)]">
         {project.description}

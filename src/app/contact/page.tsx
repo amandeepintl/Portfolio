@@ -14,10 +14,10 @@ export default function ContactPage() {
           Contact
         </p>
         <h1 id="contact-title" className="font-display mt-4 text-balance text-6xl leading-none md:text-8xl">
-          Let&apos;s talk about scholarships, guidance, or projects.
+          Hit me up for scholarships, guidance, or collabs.
         </h1>
         <p className="mt-7 max-w-2xl text-pretty text-lg leading-8 text-[color:var(--muted)]">
-          The easiest way to reach me is Gmail. You can also check my GitHub or Instagram.
+          Gmail is the easiest way to reach me. You can also find me on GitHub or Instagram.
         </p>
         <div className="mt-8">
           <ContactLinks />

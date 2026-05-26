@@ -16,10 +16,10 @@ export default function NotesPage() {
         </p>
         <div className="mt-4 grid gap-6 md:grid-cols-[0.8fr_1fr] md:items-end">
           <h1 id="notes-title" className="font-display text-balance text-6xl leading-none md:text-8xl">
-            What I learned from each project.
+            What I picked up from each project.
           </h1>
           <p className="max-w-2xl text-pretty text-base leading-8 text-[color:var(--muted)]">
-            These notes are written for reviewers and mentors. Each one explains the problem, what I learned, and what I should improve next.
+            Short notes on each build. What the problem was, what I learned, and what I want to do better next time.
           </p>
         </div>
       </section>

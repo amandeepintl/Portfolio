@@ -15,10 +15,10 @@ export default function LearningPage() {
         </p>
         <div className="mt-4 grid gap-6 md:grid-cols-[0.8fr_1fr] md:items-end">
           <h1 id="learning-title" className="font-display text-balance text-6xl leading-none md:text-8xl">
-            What I am improving.
+            What I&apos;m working on.
           </h1>
           <p className="max-w-2xl text-pretty text-base leading-8 text-[color:var(--muted)]">
-            This graph is not a final score. It shows where I am spending time and what I want to keep improving.
+            Not a final score. Just shows where I&apos;m spending time and what I&apos;m trying to get better at.
           </p>
         </div>
       </section>

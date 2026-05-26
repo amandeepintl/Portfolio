@@ -112,7 +112,7 @@ export function SiteShell({ children }: { children: ReactNode }) {
       <footer className="border-t border-[color:var(--line)] bg-[color:var(--paper)]">
         <div className="mx-auto flex w-[min(1180px,calc(100%-32px))] flex-col gap-3 py-7 text-sm font-bold text-[color:var(--muted)] md:flex-row md:items-center md:justify-between">
           <span>{profile.name}</span>
-          <span>Portfolio for scholarships, work, and collaborations.</span>
+          <span>Building stuff in public — one project at a time.</span>
         </div>
       </footer>
     </>

@@ -94,7 +94,7 @@ export function PortfolioPage() {
           <div className="grid grid-cols-[1fr_136px] gap-6 border-b border-[color:var(--line)] p-6">
             <div>
               <p className="text-sm font-extrabold uppercase tracking-[0.16em] text-[color:var(--muted)]">
-                Builder profile
+                Developer profile
               </p>
               <h2 className="mt-4 font-display text-5xl leading-none">{profile.name}</h2>
               <p className="mt-3 flex items-center gap-2 text-sm font-bold text-[color:var(--muted)]">
@@ -127,13 +127,13 @@ export function PortfolioPage() {
             <div className="flex items-start gap-3 bg-[color:var(--quiet)] p-5">
               <GraduationCap className="mt-1 h-5 w-5 text-[color:var(--cobalt)]" aria-hidden="true" />
               <p className="text-pretty text-sm font-bold leading-6 text-[color:var(--ink)]">
-                Simple enough for scholarship reviewers, mentors, collaborators, and clients to understand.
+                Easy to read for scholarship reviewers, mentors, and anyone checking my work.
               </p>
             </div>
             <div className="flex items-start gap-3 bg-[#f5ede7] p-5">
               <Code2 className="mt-1 h-5 w-5 text-[color:var(--ember)]" aria-hidden="true" />
               <p className="text-pretty text-sm font-bold leading-6 text-[color:var(--ink)]">
-                The goal is clear: show learning, useful projects, and what comes next.
+                Just showing what I learned, what I built, and where I&apos;m going next.
               </p>
             </div>
           </div>
@@ -143,10 +143,10 @@ export function PortfolioPage() {
       <section className="border-y border-[color:var(--line)] bg-[color:var(--forest)] text-white">
         <div className="mx-auto grid w-[min(1180px,calc(100%-32px))] gap-6 py-8 md:grid-cols-[0.9fr_1.1fr] md:items-center">
           <p className="font-display text-3xl leading-tight md:text-4xl">
-            Real pages for real proof.
+            Everything has its own page.
           </p>
           <p className="text-pretty text-base leading-7 text-white/78">
-            Use the top navigation to open dedicated pages for work, notes, learning progress, and contact.
+            Use the nav up top to check my work, project notes, learning progress, or just reach out.
           </p>
         </div>
       </section>
@@ -161,11 +161,11 @@ export function PortfolioPage() {
               Latest work
             </p>
             <h2 id="latest-title" className="font-display mt-4 text-balance text-5xl leading-none md:text-7xl">
-              Latest three builds.
+              My last 3 builds.
             </h2>
           </div>
           <p className="max-w-2xl text-pretty text-base leading-8 text-[color:var(--muted)]">
-            The full work page shows every project. This homepage keeps the newest work easy to scan.
+            The Work page has everything. This is just the newest stuff to give you a quick idea.
           </p>
         </div>
 
@@ -183,12 +183,12 @@ export function PortfolioPage() {
               Contact
             </p>
             <h2 id="home-contact-title" className="font-display mt-4 text-balance text-5xl leading-none md:text-7xl">
-              Contact me for scholarships, guidance, or projects.
+              Reach out for scholarships, mentoring, or collabs.
             </h2>
           </div>
           <div>
             <p className="text-pretty text-base leading-8 text-white/72">
-              The contact page has the same links in a quieter layout. These quick links are here too.
+              Gmail is the easiest way to reach me. Links are also on the Contact page if you prefer that.
             </p>
             <div className="mt-7">
               <ContactLinks dark />

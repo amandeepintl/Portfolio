@@ -16,10 +16,10 @@ export default function WorkPage() {
         </p>
         <div className="mt-4 grid gap-6 md:grid-cols-[0.8fr_1fr] md:items-end">
           <h1 id="work-title" className="font-display text-balance text-6xl leading-none md:text-8xl">
-            Projects I have built.
+            Stuff I&apos;ve built.
           </h1>
           <p className="max-w-2xl text-pretty text-base leading-8 text-[color:var(--muted)]">
-            This page shows the public projects from my GitHub in clear language: what each project does, what it proves, and where to see the code.
+            These are my public GitHub projects. Each one has a short desc, what language it&apos;s in, and a link to the repo.
           </p>
         </div>
       </section>

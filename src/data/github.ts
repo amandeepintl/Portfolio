@@ -14,9 +14,20 @@ export async function getProjects(): Promise<Project[]> {
     const repos = await res.json();
     const manualDataMap = new Map(allProjects.map((p) => [p.name.toLowerCase(), p]));
 
+    interface GitHubRepo {
+      fork: boolean;
+      name: string;
+      description: string | null;
+      html_url: string;
+      homepage: string | null;
+      language: string | null;
+      topics: string[];
+      pushed_at: string;
+    }
+
     const mergedProjects: Project[] = repos
-      .filter((repo: any) => !repo.fork && repo.name.toLowerCase() !== "amandeepintl") // filter out forks and profile README
-      .map((repo: any) => {
+      .filter((repo: GitHubRepo) => !repo.fork && repo.name.toLowerCase() !== "amandeepintl") // filter out forks and profile README
+      .map((repo: GitHubRepo) => {
         const manual = manualDataMap.get(repo.name.toLowerCase());
 
         return {

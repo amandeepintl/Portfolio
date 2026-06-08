@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
 import { ProjectCard } from "@/components/project-card";
 import { SiteShell } from "@/components/site-shell";
-import { allProjects } from "@/data/portfolio";
+import { getProjects } from "@/data/github";
 
 export const metadata: Metadata = {
   title: "Work"
 };
 
-export default function WorkPage() {
+export const revalidate = 3600; // revalidate every hour
+
+export default async function WorkPage() {
+  const projects = await getProjects();
+
   return (
     <SiteShell>
       <section className="mx-auto w-[min(1180px,calc(100%-32px))] py-14 md:py-20" aria-labelledby="work-title">
@@ -26,7 +30,7 @@ export default function WorkPage() {
 
       <section className="mx-auto w-[min(1180px,calc(100%-32px))] pb-16 md:pb-24">
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {allProjects.map((project, index) => (
+          {projects.map((project, index) => (
             <ProjectCard project={project} index={index} key={project.name} />
           ))}
         </div>

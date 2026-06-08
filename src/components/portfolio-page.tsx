@@ -6,11 +6,9 @@ import { ArrowUpRight, Code2, GraduationCap, Mail, MapPin, Sparkles } from "luci
 import { ContactLinks } from "@/components/contact-links";
 import { ProjectCard } from "@/components/project-card";
 import { SiteShell } from "@/components/site-shell";
-import { allProjects, profile } from "@/data/portfolio";
+import { profile, Project } from "@/data/portfolio";
 
-const latestHomeProjects = Array.isArray(allProjects) ? allProjects.slice(0, 3) : [];
-
-export function PortfolioPage() {
+export function PortfolioPage({ latestProjects }: { latestProjects: Project[] }) {
   return (
     <SiteShell>
       <section
@@ -136,7 +134,7 @@ export function PortfolioPage() {
         </div>
 
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {latestHomeProjects.map((project, index) => (
+          {latestProjects.map((project, index) => (
             <ProjectCard project={project} index={index} key={project.name} />
           ))}
         </div>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Manrope } from "next/font/google";
 import "./globals.css";
 import { siteConfig, profile } from "@/data/portfolio";
+import { SmoothScroll } from "@/components/smooth-scroll";
 
 const display = Fraunces({
   subsets: ["latin"],
@@ -120,11 +121,13 @@ export default function RootLayout({
         <link rel="preconnect" href="https://avatars.githubusercontent.com" />
       </head>
       <body>
-        {children}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <SmoothScroll>
+          {children}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          />
+        </SmoothScroll>
       </body>
     </html>
   );

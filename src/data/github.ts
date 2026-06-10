@@ -3,7 +3,7 @@ import { allProjects, Project } from "./portfolio";
 export async function getProjects(): Promise<Project[]> {
   try {
     const res = await fetch("https://api.github.com/users/amandeepintl/repos?sort=updated&per_page=100", {
-      next: { revalidate: 3600 }
+      next: { revalidate: 60 }
     });
 
     if (!res.ok) {
